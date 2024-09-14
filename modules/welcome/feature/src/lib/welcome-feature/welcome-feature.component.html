@@ -1,11 +1,13 @@
 <div class="container">
   <div class="left-col">
-    <lib-profile-card
-      imgSrc="images/profile_picture.jpg"
-      title="Iancu Robert"
-      subtitle="Front-end Developer"
-    />
-    <lib-social-links />
+    <div class="center-content">
+      <lib-profile-card
+        imgSrc="images/profile_picture.jpg"
+        title="Iancu Robert"
+        subtitle="Front-end Developer"
+      />
+      <lib-social-links class="social-links" [icons]="socialIcons" />
+    </div>
   </div>
-  <div class="right-col">Right</div>
+  <div class="right-col"></div>
 </div>

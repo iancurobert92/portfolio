@@ -7,8 +7,20 @@
   width: 300px;
   border-right: 1px solid lightgray;
   background-color: whitesmoke;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .right-col {
   flex-grow: 1;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  margin-top: 1rem;
 }
