@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-col {
+  width: 300px;
+  border-right: 1px solid lightgray;
+  background-color: whitesmoke;
+}
+
+.right-col {
+  flex-grow: 1;
+}

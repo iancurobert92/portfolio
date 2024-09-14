@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { WelcomeUiComponent } from './welcome-ui.component';
+import { SocialLinksComponent } from './social-links.component';
 
-describe('WelcomeUiComponent', () => {
-  let component: WelcomeUiComponent;
-  let fixture: ComponentFixture<WelcomeUiComponent>;
+describe('SocialLinksComponent', () => {
+  let component: SocialLinksComponent;
+  let fixture: ComponentFixture<SocialLinksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WelcomeUiComponent],
+      imports: [SocialLinksComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(WelcomeUiComponent);
+    fixture = TestBed.createComponent(SocialLinksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

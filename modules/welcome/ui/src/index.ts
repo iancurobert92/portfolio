@@ -1,1 +1,2 @@
-export * from './lib/welcome-ui/welcome-ui.component';
+export * from './lib/profile-card/profile-card.component';
+export * from './lib/social-links/social-links.component';
