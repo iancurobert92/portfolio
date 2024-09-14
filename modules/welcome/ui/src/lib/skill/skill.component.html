@@ -1,0 +1,7 @@
+<div class="skill-name">{{ data.name }}</div>
+@for (level of counter(data.maximumLevel); track $index) {
+<div
+  class="bar-segment"
+  [ngStyle]="getSegmentStyle($index, data.maximumLevel, gap)"
+></div>
+}

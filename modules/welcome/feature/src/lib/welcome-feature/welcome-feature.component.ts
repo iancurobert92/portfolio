@@ -9,13 +9,19 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   ProfileCardComponent,
+  SkillListComponent,
   SocialLinksComponent,
 } from '@portfolio/welcome-ui';
 
 @Component({
   selector: 'lib-welcome-feature',
   standalone: true,
-  imports: [CommonModule, ProfileCardComponent, SocialLinksComponent],
+  imports: [
+    CommonModule,
+    ProfileCardComponent,
+    SocialLinksComponent,
+    SkillListComponent,
+  ],
   templateUrl: './welcome-feature.component.html',
   styleUrl: './welcome-feature.component.scss',
 })
