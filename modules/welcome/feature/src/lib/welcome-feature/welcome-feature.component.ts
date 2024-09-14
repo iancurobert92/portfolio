@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   ProfileCardComponent,
+  SectionComponent,
   SkillListComponent,
   SocialLinksComponent,
 } from '@portfolio/welcome-ui';
@@ -21,6 +22,7 @@ import {
     ProfileCardComponent,
     SocialLinksComponent,
     SkillListComponent,
+    SectionComponent,
   ],
   templateUrl: './welcome-feature.component.html',
   styleUrl: './welcome-feature.component.scss',

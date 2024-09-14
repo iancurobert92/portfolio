@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -23,5 +27,9 @@
 
 .divider {
   color: lightgray;
+  margin-top: 1rem;
+}
+
+.section {
   margin-top: 1rem;
 }
