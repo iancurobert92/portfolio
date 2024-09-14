@@ -4,10 +4,17 @@
   align-items: center;
 }
 
-img {
+.round-mask {
   width: 150px;
   height: 150px;
+  object-fit: cover;
   border-radius: 50%;
+  overflow: hidden;
+  object-position: center;
+}
+
+img {
+  width: 100%;
 }
 
 .profile-title {
