@@ -1,1 +1,9 @@
-<p>social-links works!</p>
+<ul>
+  @for (icon of icons; track $index) {
+  <li>
+    <button class="round-button">
+      <fa-icon [icon]="icon"> </fa-icon>
+    </button>
+  </li>
+  }
+</ul>

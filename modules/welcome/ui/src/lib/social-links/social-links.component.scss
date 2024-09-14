@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  .round-button {
+    background-color: #044caa;
+    color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+}
