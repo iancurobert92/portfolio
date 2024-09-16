@@ -8,6 +8,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import {
+  LanguageListComponent,
   ProfileCardComponent,
   SectionComponent,
   SkillListComponent,
@@ -23,6 +24,7 @@ import {
     SocialLinksComponent,
     SkillListComponent,
     SectionComponent,
+    LanguageListComponent,
   ],
   templateUrl: './welcome-feature.component.html',
   styleUrl: './welcome-feature.component.scss',

@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.language-name {
+  color: gray;
+}
+
+.language-level {
+  color: #044caa;
+}
