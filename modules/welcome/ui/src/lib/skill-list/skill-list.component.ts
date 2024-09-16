@@ -11,7 +11,7 @@ import { Skill } from '../skill/skill.model';
   styleUrl: './skill-list.component.scss',
 })
 export class SkillListComponent {
-  @Input() skills: Skill[] = [
+  @Input() data: Skill[] = [
     {
       name: 'Angular 2+',
       level: 5,
