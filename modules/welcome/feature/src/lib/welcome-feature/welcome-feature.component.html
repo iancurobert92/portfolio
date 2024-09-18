@@ -1,18 +1,29 @@
 <div class="container">
   <div class="left-col">
-    <lib-profile-card
-      imgSrc="images/profile_picture.jpg"
-      title="Iancu Robert"
-      subtitle="Front-end Developer"
-    />
-    <lib-social-links class="social-links" [icons]="socialIcons" />
+    <div class="header">
+      <lib-profile-card
+        imgSrc="images/profile_picture.jpg"
+        title="Iancu Robert"
+        subtitle="Front-end Developer"
+      />
+      <lib-social-links class="social-links" [icons]="socialIcons" />
+    </div>
     <hr class="divider" />
-    <lib-section class="section" title="Skills">
-      <lib-skill-list />
-    </lib-section>
-    <lib-section class="section" title="Languages">
-      <lib-language-list />
-    </lib-section>
+    <div class="body">
+      <lib-section title="Skills">
+        <lib-skill-list />
+        <lib-skill-list />
+        <lib-skill-list />
+        <lib-skill-list />
+      </lib-section>
+      <lib-section class="mt-3" title="Languages">
+        <lib-language-list />
+      </lib-section>
+    </div>
+    <hr class="divider" />
+    <div class="footer">
+      <button class="btn-flat w-100">DOWNLOAD CV</button>
+    </div>
   </div>
   <div class="right-col"></div>
 </div>

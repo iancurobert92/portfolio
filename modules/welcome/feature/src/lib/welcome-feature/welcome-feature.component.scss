@@ -5,18 +5,37 @@
 .container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .left-col {
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
   border-right: 1px solid lightgray;
   background-color: whitesmoke;
-  padding: 2rem;
   box-sizing: border-box;
+  padding: 2rem;
 }
 
 .right-col {
   flex-grow: 1;
+}
+
+.header,
+.footer {
+  padding: 1rem 0;
+}
+
+.body {
+  overflow: auto;
+  margin: 0 -2rem;
+  padding: 1rem 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
 }
 
 .social-links {
@@ -27,9 +46,5 @@
 
 .divider {
   color: lightgray;
-  margin-top: 1rem;
-}
-
-.section {
-  margin-top: 2rem;
+  width: 100%;
 }
