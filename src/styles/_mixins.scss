@@ -16,7 +16,7 @@
 
   @each $size in $sizes {
     .#{$prefix}-#{$size} {
-      width: percentage($size / 100);
+      width: percentage(calc($size / 100));
     }
   }
 }
