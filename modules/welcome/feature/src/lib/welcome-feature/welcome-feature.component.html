@@ -1,23 +1,22 @@
+@if (resume$ | async; as resume) {
+
 <div class="container">
   <div class="left-col">
     <div class="header">
       <lib-profile-card
-        imgSrc="images/profile_picture.jpg"
-        title="Iancu Robert"
-        subtitle="Front-end Developer"
+        [imgSrc]="resume.imageUrl"
+        [title]="getFullName(resume)"
+        [subtitle]="resume.jobTitle"
       />
-      <lib-social-links class="social-links" [icons]="socialIcons" />
+      <lib-social-links class="social-links" [data]="getSocialLinks(resume)" />
     </div>
     <hr class="divider" />
     <div class="body">
       <lib-section title="Skills">
-        <lib-skill-list />
-        <lib-skill-list />
-        <lib-skill-list />
-        <lib-skill-list />
+        <lib-skill-list [data]="resume.skills" />
       </lib-section>
       <lib-section class="mt-3" title="Languages">
-        <lib-language-list />
+        <lib-language-list [data]="resume.languages" />
       </lib-section>
     </div>
     <hr class="divider" />
@@ -27,3 +26,4 @@
   </div>
   <div class="right-col"></div>
 </div>
+}

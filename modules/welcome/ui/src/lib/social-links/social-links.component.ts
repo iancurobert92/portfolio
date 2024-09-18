@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { SocialLink } from './social-link.model';
 
 @Component({
   selector: 'lib-social-links',
@@ -11,5 +11,9 @@ import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
   styleUrl: './social-links.component.scss',
 })
 export class SocialLinksComponent {
-  @Input({ required: true }) icons: IconDefinition[] = [];
+  @Input({ required: true }) data: SocialLink[] = [];
+
+  handleButtonClick(link: SocialLink) {
+    window.open(link.url, '_blank');
+  }
 }

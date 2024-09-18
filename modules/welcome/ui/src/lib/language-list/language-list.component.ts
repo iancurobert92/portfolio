@@ -10,14 +10,5 @@ import { Language } from './language.model';
   styleUrl: './language-list.component.scss',
 })
 export class LanguageListComponent {
-  @Input() data: Language[] = [
-    {
-      name: 'Romanian',
-      level: 'Native',
-    },
-    {
-      name: 'English',
-      level: 'Upper Intermediate (B2)',
-    },
-  ];
+  @Input() data: Language[] = [];
 }
