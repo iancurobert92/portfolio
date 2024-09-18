@@ -17,6 +17,9 @@
     "paths": {
       "@portfolio/contacts-feature": ["modules/contacts/feature/src/index.ts"],
       "@portfolio/contacts-ui": ["modules/contacts/ui/src/index.ts"],
+      "@portfolio/welcome-data-access": [
+        "modules/welcome/data-access/src/index.ts"
+      ],
       "@portfolio/welcome-feature": ["modules/welcome/feature/src/index.ts"],
       "@portfolio/welcome-ui": ["modules/welcome/ui/src/index.ts"]
     }
