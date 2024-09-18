@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+@import './styles/mixins';
+
 html,
 body {
   height: 100%;
@@ -8,3 +10,21 @@ body {
   padding: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+.btn-flat {
+  background-color: #044caa;
+  border: none;
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1f5dad;
+  }
+}
+
+@each $label, $prop in $marginRules {
+  @include createMarginClasses($label, $prop);
+}
+
+@include createWidthClasses(w);

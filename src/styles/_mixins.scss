@@ -1,0 +1,22 @@
+@mixin createMarginClasses($prefix, $property) {
+  $sizes: 0, 0.25, 0.5, 1, 1.5, 3;
+  $spacing: 1rem;
+
+  @for $i from 1 through length($sizes) {
+    $size: nth($sizes, $i);
+
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $spacing * $size;
+    }
+  }
+}
+
+@mixin createWidthClasses($prefix) {
+  $sizes: 0, 50, 100;
+
+  @each $size in $sizes {
+    .#{$prefix}-#{$size} {
+      width: percentage($size / 100);
+    }
+  }
+}
