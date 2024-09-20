@@ -12,6 +12,7 @@ describe('SkillComponent', () => {
 
     fixture = TestBed.createComponent(SkillComponent);
     component = fixture.componentInstance;
+    component.data = { name: 'Angular', level: 4, maximumLevel: 5 };
     fixture.detectChanges();
   });
 

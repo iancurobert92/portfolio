@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { WelcomeFeatureComponent } from './welcome-feature.component';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('WelcomeFeatureComponent', () => {
   let component: WelcomeFeatureComponent;
@@ -8,6 +9,7 @@ describe('WelcomeFeatureComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [WelcomeFeatureComponent],
+      providers: [provideHttpClient(), provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(WelcomeFeatureComponent);
