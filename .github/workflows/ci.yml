@@ -9,8 +9,11 @@ on:
       - main
 
 permissions:
-  actions: read
-  contents: read
+  actions: write
+  contents: write
+  pull-requests: write
+  issues: write
+  repository-projects: write
 
 jobs:
   main:
@@ -41,14 +44,15 @@ jobs:
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
+
+      - name: Run build
+        run: npm run affected:build
+
       - name: Run lint
         run: npm run affected:lint
 
       - name: Run unit tests
         run: npm run affected:test
-
-      - name: Run build
-        run: npm run affected:build
 
       - name: Run e2e tests
         run: npm run affected:e2e-ci
