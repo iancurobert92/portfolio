@@ -8,10 +8,10 @@
     "affected:build": "nx affected -t build",
     "affected:build:docs": "nx affected -t build --output-path docs",
     "test": "nx test",
-    "affected:test": "npx nx affected -t test",
+    "affected:test": "nx affected -t test",
     "lint": "nx lint",
-    "affected:lint": "npx nx affected -t lint",
-    "affected:e2e-ci": "npx nx affected -t e2e-ci"
+    "affected:lint": "nx affected -t lint",
+    "affected:e2e-ci": "nx affected -t e2e-ci"
   },
   "private": true,
   "dependencies": {
