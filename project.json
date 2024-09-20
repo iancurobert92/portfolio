@@ -12,7 +12,6 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/portfolio",
-        "baseHref": "/portfolio/",
         "index": "./src/index.html",
         "main": "./src/main.ts",
         "polyfills": ["zone.js"],
