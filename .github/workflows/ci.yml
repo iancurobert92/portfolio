@@ -53,7 +53,7 @@ jobs:
       - name: Run e2e tests
         run: npm run affected:e2e-ci
 
-      - name: Deploy to git-pages
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
