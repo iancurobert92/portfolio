@@ -54,4 +54,6 @@ jobs:
         run: npm run affected:e2e-ci
 
       - name: Clone to git-pages
-        run: ngh --dir=dist/portfolio
+        run: |
+          npm install -g angular-cli-ghpages
+          ngh --dir=dist/portfolio
