@@ -54,6 +54,8 @@ jobs:
         run: npm run affected:e2e-ci
 
       - name: Clone to git-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g angular-cli-ghpages
           ngh --dir=dist/portfolio
