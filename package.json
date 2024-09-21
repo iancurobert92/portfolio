@@ -7,7 +7,7 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",
-    "affected:build": "nx affected -t build -- --configuration=production --base-href=/portfolio/",
+    "affected:build": "nx affected -t build -- --base-href=/portfolio/",
     "affected:test": "nx affected -t test",
     "affected:lint": "nx affected -t lint",
     "affected:e2e-ci": "nx affected -t e2e-ci"
