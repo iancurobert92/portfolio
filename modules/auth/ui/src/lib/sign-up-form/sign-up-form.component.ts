@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'lib-auth-feature',
+  selector: 'lib-sign-up-form',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './auth-feature.component.html',
-  styleUrl: './auth-feature.component.scss',
+  templateUrl: './sign-up-form.component.html',
+  styleUrl: './sign-up-form.component.scss',
 })
-export class AuthFeatureComponent {}
+export class SignUpFormComponent {}

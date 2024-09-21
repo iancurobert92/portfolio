@@ -9,9 +9,9 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: 'login',
-    loadComponent: () =>
-      import('@portfolio/auth-feature').then((c) => c.AuthFeatureComponent),
+    path: 'auth',
+    loadChildren: () =>
+      import('@portfolio/auth-feature').then((r) => r.authRoutes),
   },
   {
     path: 'contacts',
