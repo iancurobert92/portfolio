@@ -7,7 +7,7 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",
-    "affected:build": "nx affected -t build -- --base-href=/portfolio/",
+    "affected:build": "nx affected -t build -- --configuration=production --base-href=/portfolio/",
     "affected:test": "nx affected -t test",
     "affected:lint": "nx affected -t lint",
     "affected:e2e-ci": "nx affected -t e2e-ci"
@@ -62,7 +62,6 @@
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-playwright": "^0.15.3",
-    "gh-pages": "^6.1.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.1.0",
