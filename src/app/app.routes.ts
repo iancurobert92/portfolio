@@ -1,10 +1,17 @@
 import { Route } from '@angular/router';
-import { WelcomeFeatureComponent } from '@portfolio/welcome-feature';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    component: WelcomeFeatureComponent,
+    loadComponent: () =>
+      import('@portfolio/welcome-feature').then(
+        (c) => c.WelcomeFeatureComponent
+      ),
+  },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('@portfolio/auth-feature').then((c) => c.AuthFeatureComponent),
   },
   {
     path: 'contacts',
