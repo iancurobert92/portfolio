@@ -58,6 +58,8 @@ jobs:
         run: npm run affected:e2e-ci
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          folder: dist/portfolio
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/portfolio
+          publish_branch: gh-pages
