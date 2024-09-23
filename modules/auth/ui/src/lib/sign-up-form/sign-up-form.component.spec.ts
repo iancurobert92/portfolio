@@ -1,21 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockBuilder, MockRender } from 'ng-mocks';
 import { SignUpFormComponent } from './sign-up-form.component';
 
 describe('SignUpFormComponent', () => {
-  let component: SignUpFormComponent;
-  let fixture: ComponentFixture<SignUpFormComponent>;
-
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [SignUpFormComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(SignUpFormComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    return MockBuilder(SignUpFormComponent);
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = MockRender(SignUpFormComponent);
+
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

@@ -1,14 +1,12 @@
-import { TestBed } from '@angular/core/testing';
 import {
   Auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
   user,
-  UserCredential,
 } from '@angular/fire/auth';
-import { RouterModule } from '@angular/router';
 import { AuthService } from '@portfolio/auth-data-access';
+import { MockBuilder, MockRender } from 'ng-mocks';
 import { of } from 'rxjs';
 import { AppComponent } from './app.component';
 
@@ -24,23 +22,20 @@ jest.mock('@angular/fire/auth', () => {
 
 describe('AppComponent', () => {
   beforeEach(async () => {
-    (signInWithEmailAndPassword as jest.Mock).mockResolvedValue(
-      {} as UserCredential
-    );
-    (createUserWithEmailAndPassword as jest.Mock).mockResolvedValue(
-      {} as UserCredential
-    );
+    (signInWithEmailAndPassword as jest.Mock).mockResolvedValue({});
+    (createUserWithEmailAndPassword as jest.Mock).mockResolvedValue({});
     (signOut as jest.Mock).mockResolvedValue(undefined);
     (user as jest.Mock).mockReturnValue(of(null));
 
-    await TestBed.configureTestingModule({
-      imports: [AppComponent, RouterModule.forRoot([])],
-      providers: [AuthService, { provide: Auth, useValue: {} }],
-    }).compileComponents();
+    return MockBuilder(AppComponent)
+      .mock(AuthService, {
+        user$: of(null),
+      })
+      .mock(Auth);
   });
 
   it(`should create`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = MockRender(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
