@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
-import { authFeatureGuard } from './auth-feature.guard';
+import { AuthFeatureComponent } from './auth-feature.component';
 
 export const authRoutes: Route[] = [
   {
     path: '',
-    canActivateChild: [authFeatureGuard],
+    component: AuthFeatureComponent,
     children: [
       {
         path: '',
