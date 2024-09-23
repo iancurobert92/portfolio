@@ -20,8 +20,6 @@ export class SignInComponent {
   errorMessage: string | null = null;
 
   onFormSubmit(data: { email: string; password: string }) {
-    console.log(data);
-
     this.authService
       .signIn(data.email, data.password)
       .pipe(takeUntilDestroyed(this.destroyRef))
