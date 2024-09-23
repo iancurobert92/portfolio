@@ -1,5 +1,3 @@
-/* tslint:disable:no-unused-variable */
-
 import { inject } from '@angular/core/testing';
 import {
   Auth,
