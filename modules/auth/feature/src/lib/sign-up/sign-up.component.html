@@ -1,0 +1,7 @@
+@if (errorMessage) {
+<div>{{ errorMessage }}</div>
+}
+<lib-sign-up-form
+  [signInLink]="['../', 'sign-in']"
+  (formSubmit)="onFormSubmit($event)"
+/>

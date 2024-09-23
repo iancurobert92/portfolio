@@ -1,13 +1,24 @@
 import { Route } from '@angular/router';
-import { WelcomeFeatureComponent } from '@portfolio/welcome-feature';
+import { anonGuard, authGuard } from '@portfolio/auth-data-access';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    component: WelcomeFeatureComponent,
+    canActivate: [anonGuard],
+    loadComponent: () =>
+      import('@portfolio/welcome-feature').then(
+        (c) => c.WelcomeFeatureComponent
+      ),
+  },
+  {
+    path: 'auth',
+    canActivate: [authGuard],
+    loadChildren: () =>
+      import('@portfolio/auth-feature').then((r) => r.authRoutes),
   },
   {
     path: 'contacts',
+    canActivate: [anonGuard],
     loadComponent: () =>
       import('@portfolio/contacts-feature').then(
         (c) => c.ContactsFeatureComponent

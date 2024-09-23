@@ -39,6 +39,10 @@
               {
                 "sourceTag": "scope:welcome",
                 "onlyDependOnLibsWithTags": ["scope:welcome"]
+              },
+              {
+                "sourceTag": "scope:auth",
+                "onlyDependOnLibsWithTags": ["scope:auth"]
               }
             ]
           }

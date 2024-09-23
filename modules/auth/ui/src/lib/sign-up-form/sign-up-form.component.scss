@@ -1,0 +1,36 @@
+:host {
+  min-width: 400px;
+  max-width: 500px;
+  background-color: #044caa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    height: 32px;
+  }
+}
+
+.actions-container {
+  display: flex;
+  justify-content: end;
+  font-size: 14px;
+
+  a:link,
+  a:visited {
+    color: white;
+  }
+
+  a:hover {
+    color: black;
+  }
+
+  a:active {
+    color: blue;
+  }
+}
