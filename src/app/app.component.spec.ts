@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 import {
   Auth,
   createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signOut,
   user,
